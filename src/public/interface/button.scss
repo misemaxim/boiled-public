@@ -1,0 +1,70 @@
+@import 'src/public/base.scss';
+
+a.interface-button, button.interface-button, label.interface-button {
+  background: $color-black;
+  text-transform: uppercase;
+  color: $color-white;
+  font-weight: 900;
+  font-size: $text-m;
+  line-height: $text-m;
+  padding: $offset-xs $offset-s;
+  display: inline-block;
+  cursor: pointer;
+  display: flex;
+  gap: $offset-2xs;
+  width: fit-content;
+  min-width: fit-content;
+  align-items: center;
+  height: 38px;
+  white-space: nowrap;
+  border-radius: $border-radius;
+  position: relative;
+
+  svg {
+    fill: $color-white;
+  }
+
+  &[data-large="1"] {
+    font-size: $text-l;
+    line-height: $text-l;
+    padding: $offset-s $offset-m;
+    height: 48px;
+    gap: $offset-s;
+  }
+
+  &[data-empty="1"] {
+    background: rgba($color-black, .1);
+    color: $color-black;
+
+    svg {
+      fill: $color-black;
+    }
+  }
+
+  &[data-wide="1"] {
+    width: unset;
+    justify-content: center;
+  }
+
+  &[data-disabled="1"] {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  &[data-danger="1"] {
+    background: $color-red;
+  }
+
+  &[data-icon="1"] {
+    padding: $offset-xs;
+  }
+
+  &:hover {
+
+    &[data-disabled="1"] {
+      top: unset;
+    }
+
+    top: - $offset-3xs;
+  }
+}

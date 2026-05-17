@@ -1,0 +1,16 @@
+@import 'src/public/base.scss';
+
+div.interface-spacer {
+
+  &.s {
+    margin-top: $offset-s;
+  }
+
+  &.m {
+    margin-top: $offset-m;
+  }
+
+  &.l {
+    margin-top: $offset-l;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "type": "search",
+  "name": "Search For The Parking Space",
+  "script": "const { query, session, overlay, context } = scope;\n\nconst streetSearch = query.toLowerCase();\nconst group = session.groups.find(g => g.name === 'Parking Spaces');\nconst points = session.points[group.id].filter(p => p.properties[2].toLowerCase().includes(streetSearch));\noverlay({\n  message: `Found Parking Lots:\n\t${points.map(p => p.properties[2] + ' - ' + p.properties[1] + ' spaces').join(', \\n')}.\n  `,\n  confirmText: 'Navigate To The Biggest One',\n  confirmAction: () => {\n  \tconst lot = points.reduce((best, current) =>\n      Number(current.properties[1]) > Number(best.properties[1]) ? current : best\n    );\n    context.methods.goToCoordinates(lot.coordinates, 20);\n  }\n});"
+}

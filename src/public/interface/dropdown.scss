@@ -1,0 +1,62 @@
+@import 'src/public/base.scss';
+
+div#app-root {
+
+  span.interface-dropdown {
+    width: fit-content;
+    display: block;
+    display: inline-block;
+  }
+
+  ul.dropdown-content {
+    border-radius: 4px;
+
+    li {
+      min-height: unset;
+      line-height: unset;
+      list-style-type: none;
+
+      &:hover {
+
+        a, span {
+          background: lighten($color-black, 8%);
+        }
+      }
+
+      a, span {
+
+        span {
+          padding: 0px;
+
+          & > span {
+            padding: $offset-s;
+          }
+        }
+
+        display: block;
+        width: 100%;
+        font-size: $text-s;
+        line-height: $text-s;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: $color-white;
+        padding: $offset-s;
+        white-space: nowrap;
+        background: $color-black;
+
+        &[data-danger="1"] {
+          color: $color-red;
+        }
+
+        &[data-center="1"] {
+          text-align: center;
+        }
+
+        &[data-selected="1"] {
+          background: $color-white;
+          color: $color-black;
+        }
+      }
+    }
+  }
+}

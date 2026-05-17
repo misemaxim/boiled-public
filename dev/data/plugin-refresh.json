@@ -1,0 +1,5 @@
+{
+  "type": "refresh",
+  "name": "Filming Activity at N Fairfax Ave. / Romaine Str.",
+  "script": "const { session, context, axios, notification, overlay } = scope;\n\nconst lon = -118.361543;\nconst lat = 34.088809;\nconst group = session.groups.find(g => g.name === 'Filming Activity');\nconst points = session.points[group.id].filter(p => Math.abs(p.coordinates[0] - lon) < 0.003 && Math.abs(p.coordinates[1] - lat) < 0.003);\n\noverlay({\n  message: `Found Filming Activity at N Fairfax Ave. / Romaine Str.:\n\t${points.map(p => p.properties[2] + ' - ' + p.properties[0]).join(', \\n')}.\n  `,\n});"
+}

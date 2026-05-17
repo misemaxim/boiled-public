@@ -1,0 +1,11 @@
+{
+  "watch": [
+    ".config.toml",
+    "src/index.html",
+    "src/server/*",
+    "src/common/*"
+  ],
+  "ignore": ["**.jest.[jt]s?(x)"],
+  "ext": "ts",
+  "exec": "webpack serve --mode development"
+}

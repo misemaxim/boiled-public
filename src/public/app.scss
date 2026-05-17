@@ -1,0 +1,199 @@
+@import 'normalize.css';
+@import 'src/public/base.scss';
+@font-face {
+  font-family: "Roboto Flex";
+  src: url("../font/RobotoFlex.ttf") format("truetype-variations");
+  font-weight: 100 1000;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto Flex"
+}
+
+div#toast-container {
+
+  div.toast {
+    background: $color-black;
+    border-radius: $border-radius;
+    border-left: 4 * $border-size solid $color-teal;
+
+    &.danger {
+      border-color: $color-red;
+    }
+  }
+}
+
+div.material-tooltip {
+  background: $color-black;
+  border-radius: $border-radius;
+  padding: $offset-xs $offset-s;
+  min-height: unset;
+  font-size: $text-s;
+}
+
+div#app-root {
+
+  div.interface-confirmation-content {
+    white-space: pre-line;
+  }
+
+  span[aria-selected="true"] {
+    background: $color-black;
+    color: $color-white;
+  }
+
+  input.boiled-contrast-input, div.boiled-contrast-input > select {
+    border-color: $color-black;
+    background: $color-white;
+    color: $color-black;
+    box-shadow: $shadow-outer-2 !important;
+    display: block;
+
+    &::placeholder {
+      color: $color-gray;
+    }
+
+    &:focus, &:hover {
+      border-color: $color-black;
+    }
+  } 
+
+  button.boiled-contrast-button {
+    border-color: $color-black;
+    background: $color-white;
+    color: $color-black;
+    box-shadow: $shadow-outer-2 !important;
+
+    &.boiled-contrast-button-filled {
+      background: $color-black;
+      color: $color-white;
+
+      svg {
+        fill: $color-white;
+      }
+
+      &:hover {
+        top: -2px;
+        border-color: $color-black;
+        background: $color-black;
+      }
+    }
+
+    svg {
+      fill: $color-black;
+    }
+
+    &:hover {
+      top: -2px;
+      border-color: unset;
+      background: $color-white;
+    }
+  }
+
+  button.boiled-alert-button {
+    border-color: $color-red;
+    background: $color-white;
+    color: $color-red;
+    box-shadow: $shadow-outer-2 !important;
+
+    svg {
+      fill: $color-black;
+    }
+
+    &:hover {
+      top: -2px;
+      border-color: unset;
+      background: $color-white;
+    }
+  }
+
+  button.boiled-submit-button {
+    border-color: $color-black;
+    background: $color-teal;
+    color: $color-black;
+    box-shadow: $shadow-outer-2 !important;
+
+    svg {
+      fill: $color-black;
+    }
+
+    &:hover {
+      top: -2px;
+      border-color: unset;
+      background: $color-teal;
+    }
+  }
+
+  span.boiled-sub-label {
+    display: inline-block;
+    font-size: 12px;
+    background: $color-black;
+    color: $color-white;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-bottom: 5px;
+    box-shadow: $shadow-outer-2;
+  }
+}
+
+div.boiled-buttons-list {
+
+  button {
+    background: unset;
+    border: none;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $color-black;
+    font-weight: 500;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: unset;
+    }
+
+    &.boiled-buttons-list-active {
+      color: $color-white;
+      background: $color-black;
+    }
+  }
+}
+
+div[role="dialog"] {
+  border: 1px solid $color-black;
+
+  & > div {
+    padding: 20px;
+  }
+}
+
+div.boiled-popover-form {
+  padding: 10px;
+  width: 200px;
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+div.boiled-app-module-content {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  overflow: auto;
+
+  div.boiled-app-module-content-centered {
+    padding: 16px;
+    max-width: 800px;
+    margin: 0px auto;
+  }
+}

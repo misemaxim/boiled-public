@@ -1,0 +1,102 @@
+{
+  "defaultActions": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "export": "Export",
+    "startNew": "Start New",
+    "save": "Save",
+    "saveAsNew": "Save As New",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "information": "Information",
+    "nameInputLabel": "Name"
+  },
+  "measurements": {
+    "km": "km",
+    "m": "m",
+    "mi": "mi",
+    "yd": "yd",
+    "seconds": "s"
+  },
+  "settings": {
+    "measurementSystemTitle": "Unit of Measurement",
+    "systemMetric": "Metric",
+    "systemImperial": "Imperial"
+  },
+  "user": {
+    "usernameLabel": "Username",
+    "statusLabel": "Status",
+    "changePasswordButton": "Change Password",
+    "changePasswordCurrentPasswordTitle": "Current Password",
+    "changePasswordNewPasswordTitle": "New Password",
+    "changePasswordRepeatNewPasswordTitle": "Repeat New Password",
+    "logOutButton": "Log Out"
+  },
+  "navigation": {
+    "mapping": "Mapping",
+    "plugins": "Plugins",
+    "settings": "Settings",
+    "user": "User",
+    "docs": "Docs",
+    "about": "About"
+  },
+  "actions": {
+    "editorAddGroupProperty": "Add Property",
+    "mappingSessions": "Sessions Manager",
+    "mappingMapGroups": "Map Groups",
+    "mappingZoomIn": "Zoom In",
+    "mappingZoomOut": "Zoom Out",
+    "mappingFreeDragging": "Free Dragging",
+    "mappingNavigateMe": "Navigate Me",
+    "mappingGoToCoordinates": "Go To Coordinates",
+    "mappingSearch": "Search",
+    "mappingLayers": "Layers",
+    "mappingGraticule": "Graticule",
+    "mappingSnapshot": "Snapshot",
+    "mappingRefresh": "Refresh",
+    "mappingRefreshInterval": "Auto-Refresh",
+    "mappingAddGeometry": "Add Geometry",
+    "mappingAddGeometryLine": "Add Line",
+    "mappingAddGeometryCircle": "Add Circle",
+    "mappingAddGeometryPolygon": "Add Polygon",
+    "mappingAddGeometryArrow": "Add Arrow",
+    "mappingMeasurement": "Add Measurement",
+    "mappingMeasurementLine": "Add Line Measurement",
+    "mappingMeasurementArea": "Add Area Measurement",
+    "mappingPlugins": "Plugins",
+    "mappingContextAddPoint": "Add Point",
+    "mappingContextCenterMap": "Center on Coordinates",
+    "mappingContextRunPlugin": "Coordinates Plugins",
+    "pluginsEvaluate": "Evaluate Plugin",
+    "pluginsManager": "Plugins Manager"
+  },
+  "statuses": {
+    "sessionUnsaved": "This session is not saved",
+    "sessionChanges": "The current state of this session differs from the saved version. You can sync it with the saved one",
+    "sessionClean": "No changes to save"
+  },
+  "errors": {
+    "failedCoordinates": "The selected coordinates are invalid"
+  },
+  "confirmations": {
+    "deleteGroup": "Do you want to delete the following group: \"{name}\" and all included points?",
+    "deletePoint": "Do you want to delete the following point: \"{name}\"?",
+    "deleteSession": "Do you want to delete the following session: \"{name}\"?",
+    "deletePlugin": "Do you want to delete the following plugin: \"{name}\"?",
+    "pluginTypeChange": "The plugin body has been edited and may be incompatible with the new type. Are you sure you want to continue and change the plugin type?"
+  },
+  "labels": {
+    "inputIconSearch": "Icon Search",
+    "inputLongitude": "Longitude",
+    "inputLatitude": "Latitude",
+    "inputMapGroup": "Map Group",
+    "titlePluginTypeCoordinates": "Coordinates",
+    "titlePluginTypeSearch": "Search",
+    "titlePluginTypeRefresh": "Refresh",
+    "titlePluginTypePoint": "Point",
+    "titleMappingGeometry": "Geometry",
+    "titleDefaultProperty": "Group Property"
+  }
+}

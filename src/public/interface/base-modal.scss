@@ -1,0 +1,52 @@
+@import 'src/public/base.scss';
+
+div#app-root {
+
+  div.interface-base-modal {
+    background: $color-white;
+    width: 100%;
+    max-width: 560px;
+    padding: 0px;
+    border-radius: 4px;
+
+    &[data-wide="1"] {
+      max-width: 1024px;
+    }
+
+    div.modal-content {
+      padding: $offset-m;
+      background: $color-white;
+    }
+
+    div.modal-footer {
+      margin: 0px;
+      border-top: $border-size solid $color-black;
+      background: $color-white;
+      padding: $offset-m;
+      height: unset;
+      display: flex;
+      gap: $offset-m;
+      position: sticky;
+      bottom: 0px;
+      z-index: 5;
+      // justify-content: right;
+      // flex-wrap: wrap;
+
+      &[data-wide-button="1"] {
+
+        a {
+          flex-basis: 100%;
+        }
+      }
+
+      a {
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,62 @@
+@import 'src/public/base.scss';
+
+div.boiled-group-icon-select {
+
+  img {
+    padding: 5px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+
+    &[data-highlighted="1"] {
+      box-shadow: $shadow-outer-2;
+
+      &:hover {
+        top: 0px;
+      }
+    }
+
+    &:hover {
+      top: -2px;
+    }
+  }
+}
+
+div.boiled-group-color-select {
+
+  input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    border-radius: 50%;
+    box-shadow: $shadow-outer-2;
+    overflow: hidden;
+
+    &::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+
+    &::-webkit-color-swatch {
+        border: none;
+    }
+  }
+}
+
+div.group-property-row {
+  display: flex;
+  align-items: end;
+  gap: $offset-xs;
+
+  & > div:first-child {
+    flex-grow: 1;
+  }
+}
+
+div.boiled-group-selected-icon {
+
+  img {
+    width: 96px;
+  }
+}

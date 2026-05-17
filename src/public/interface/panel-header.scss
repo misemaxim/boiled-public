@@ -1,0 +1,33 @@
+@import 'src/public/base.scss';
+
+div.interface-panel-header {
+  position: sticky;
+  top: 0;
+  height: $navigation-height;
+  background: $color-black;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  z-index: 5;
+  align-items: center;
+
+  & > a, & > span {
+    flex-grow: 0;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: $navigation-height;
+    padding: $offset-xs;
+    font-size: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      fill: $color-white;
+      stroke-width: 1px;
+      stroke-opacity: 1;
+      stroke: $color-white;
+    }
+  }
+}

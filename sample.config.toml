@@ -1,0 +1,21 @@
+superUser="boiled"
+
+[app.layers]
+enableDefault=true
+enableSatellite=true
+customLayers=[
+  { name="Layer A", url="https://layers-for-boiled.com/tile/{z}/{y}/{x}", attribution="Copyright 1" },
+  { name="Layer B", url="https://layers-for-boiled.com/tile/{z}/{y}/{x}", attribution="Copyright 2" }
+]
+
+[app.public]
+enabled=true
+sessionId="DzfPJsqWCOmmyT04"
+message="This Is Public"
+layers=[
+  { name="Layer A", url="https://layers-for-boiled.com/tile/{z}/{y}/{x}", attribution="Copyright 1" },
+  { name="Layer B", url="https://layers-for-boiled.com/tile/{z}/{y}/{x}", attribution="Copyright 2" }
+]
+
+[server]
+port=9000

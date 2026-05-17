@@ -1,0 +1,33 @@
+@import 'src/public/base.scss';
+
+div.interface-data-row {
+  display: flex;
+  align-items: center;
+  padding: $offset-2xs;
+  margin-bottom: $offset-xs;
+  border-radius: $border-radius;
+  min-height: 46px;
+
+  & > div:first-child {
+    flex-grow: 1;
+    font-size: $text-m;
+    line-height: $text-m;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+
+    img.interface-service-icon {
+      margin-right: $offset-2xs;
+    }
+  }
+
+  & > div:last-child {
+    display: flex;
+    gap: $offset-xs;
+  }
+
+  &:hover {
+    background: darken($color-white, 16%);
+  }
+}

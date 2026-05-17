@@ -1,0 +1,41 @@
+@import 'src/public/base.scss';
+
+div.interface-side-panel {
+  max-width: unset;
+  width: 100%;
+
+  & > div:first-child {
+    position: relative;
+    z-index: 4;
+  }
+}
+
+div.interface-side-panel-content-wrapper {
+  height: calc(100dvh - #{$navigation-height});
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  & > div:first-child {
+    flex-grow: 1;
+    overflow: auto;
+    padding: $offset-s;
+  }
+
+  & > div:last-child {
+    flex-grow: 0;
+
+    & > div {
+      background: $color-white;
+      padding: $offset-s;
+      border-top: $border-size solid $color-black;
+
+      a {
+        width: auto;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+  }
+}

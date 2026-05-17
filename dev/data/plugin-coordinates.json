@@ -1,0 +1,5 @@
+{
+  "type": "coordinates",
+  "name": "Filming Activity Nearby",
+  "script": "const { coordinates, session, context, axios, notification, overlay } = scope;\n\nconst lon = coordinates[0];\nconst lat = coordinates[1];\nconst group = session.groups.find(g => g.name === 'Filming Activity');\nconst points = session.points[group.id].filter(p => Math.abs(p.coordinates[0] - lon) < 0.003 && Math.abs(p.coordinates[1] - lat) < 0.003);\n\noverlay({\n  message: `Found Music Video Filming Activity:\n\t${points.map(p => p.properties[2] + ' - ' + p.properties[0]).join(', \\n')}.\n  `,\n});"
+}

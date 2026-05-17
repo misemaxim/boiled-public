@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "types": ["cypress", "node", "materialize-css"],
+    "skipLibCheck": false
+  },
+  "include": ["custom.d.ts", "tests/cypress/**/*.ts"]
+}

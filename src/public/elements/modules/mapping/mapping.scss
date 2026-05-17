@@ -1,0 +1,134 @@
+@import 'src/public/base.scss';
+
+div.app-home-controls {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  height: 41px;
+  box-shadow: $shadow-outer-1;
+  position: relative;
+  z-index: 2;
+  display: flex;
+
+  div.app-home-controls-left {
+    flex-grow: 1;
+  }
+
+  div.app-home-controls-right {
+    flex-grow: 0;
+    margin-left: 10px;
+  }
+
+  div[role="group"] {
+    margin-right: 10px;
+    border-radius: 4px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+div.interface-primary-navigation.storage {
+  top: unset;
+  bottom: 40px;
+  align-items: center;
+}
+
+div.boiled-tools-controls {
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  left: 0px;
+  background: $color-white;
+  padding: 10px;
+  border: 1px solid black;
+  border-left: none;
+  box-shadow: $shadow-outer-1;
+  border-radius: 0px 4px 4px 0px;
+
+  div[role="group"] {
+    flex-direction: column;
+    display: block;
+    width: 40px;
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0px;
+    }
+
+    button:first-child {
+      border-radius: 4px 4px 0px 0px;
+      margin-left: -1px
+    }
+
+    button:last-child {
+      border-radius: 0px 0px 4px 4px;
+    }
+
+    button:hover {
+      top: unset !important;
+      right: -2px;
+    }
+  }
+}
+
+div#boiled-map-container {
+  width: 100%;
+  height: calc(100vh - #{$map-bottom-measures-height});
+  position: relative;
+  z-index: 1;
+  box-shadow: $shadow-outer-2;
+  background: $color-black;
+  border-bottom: 1px solid $color-black;
+
+  div.boiled-measure-tooltip {
+    background: $color-black;
+    color: $color-orange;
+    padding: $offset-xs $offset-s;
+    font-size: $offset-s;
+    line-height: $offset-s;
+  }
+
+  div.ol-zoom, div.ol-rotate {
+    display: none;
+  }
+
+  div.ol-attribution {
+    background: $color-white;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    bottom: $offset-s;
+    right: $offset-s;
+    border-radius: $border-radius;
+    color: $color-black;
+    font-size: 0px;
+    padding: $offset-xs $offset-2xs;
+    box-shadow: $shadow-z1;
+  
+    ul {
+      margin: 0px 5px;
+      padding: 0px;
+  
+      li {
+        display: inline-block;
+        font-size: $text-2xs;
+        line-height: $text-2xs;
+        margin-right: $offset-2xs;
+  
+        &:last-child {
+          margin-right: 0px;
+        }
+  
+        a {
+          color: $color-black;
+          font-weight: 700;
+        }
+      }
+    }
+  
+    button {
+      display: none;
+    }
+  }
+}

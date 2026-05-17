@@ -1,0 +1,16 @@
+@import 'src/public/base.scss';
+
+div#app-root {
+
+  div.boiled-point-info {
+
+    & > div {
+      display: flex;
+      gap: $offset-2xs;
+      align-items: center;
+      font-size: $text-m;
+      line-height: $text-m;
+      min-height: 24px;
+    }
+  }
+}

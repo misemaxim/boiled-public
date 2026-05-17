@@ -1,0 +1,21 @@
+@import 'src/public/base.scss';
+
+div.boiled-map-bottom-measures {
+  font-size: 0px;
+  background: $color-white;
+  height: $map-bottom-measures-height;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  div.boiled-map-bottom-measures-bar {
+    flex: 1 1;
+    margin: 5px;
+    font-size: 12px;
+    color: $color-black;
+    text-align: center;
+    border-bottom: 1px solid $color-black;
+    border-left: 1px solid $color-black;
+    border-right: 1px solid $color-black;
+  }
+}

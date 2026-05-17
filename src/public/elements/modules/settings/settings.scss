@@ -1,0 +1,10 @@
+@import 'src/public/base.scss';
+
+div.boiled-app-module-content.settings {
+  background: $color-white;
+
+  div.boiled-settings {
+    margin-top: 102px;
+    padding: $offset-s;
+  }
+}

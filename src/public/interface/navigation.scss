@@ -1,0 +1,103 @@
+@import 'src/public/base.scss';
+
+div.boiled-navigation-modal {
+  font-size: $text-m;
+
+  h2 {
+    font-size: $text-l;
+    line-height: $text-l;
+    font-weight: 900;
+  }
+
+  div.actions {
+    margin-top: $offset-m;
+    width: 100%;
+    gap: $offset-2xs;
+    display: flex;
+    flex-direction: column;
+
+    a, span.interface-dropdown {
+      width: 100%;
+    }
+  }
+}
+
+img.boiled-about-logo {
+  display: block;
+  width: 256px;
+  margin-bottom: $offset-s;
+}
+
+div.interface-primary-navigation, div.interface-secondary-navigation {
+  position: fixed;
+  top: $offset-s;
+  left: $offset-s;
+  padding: $offset-s;
+  z-index: 10;
+  background: $color-white;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  display: flex;
+  gap: $offset-s;
+  border-radius: $border-radius;
+
+  &.interface-secondary-navigation {
+    left: unset;
+    right: $offset-s;
+  }
+
+  a.interface-app-navigation {
+    background: $color-teal;
+    padding: $offset-xs;
+
+    img {
+      width: 24px;
+    }
+  }
+
+  a.active {
+    background: $color-orange;
+  }
+
+  & > div {
+    display: flex;
+    gap: 2px;
+
+    a.interface-button {
+      border-radius: 0px;
+
+      &:first-child {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+      }
+
+      &:last-child {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+    }
+
+    span.interface-dropdown {
+
+      &:first-child {
+
+        a.interface-button {
+          border-top-left-radius: $border-radius;
+          border-bottom-left-radius: $border-radius;
+        }
+      }
+
+      &:last-child {
+
+        a.interface-button {
+          border-top-right-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+        }
+      }
+      
+      a.interface-button {
+        border-radius: 0px;
+      }
+    }
+  }
+}
